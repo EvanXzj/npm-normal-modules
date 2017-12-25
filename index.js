@@ -13,6 +13,7 @@ let a = [
   },
 ];
 var a = 'x1zla';
+
 async x => {
   try {
     console.log(1);

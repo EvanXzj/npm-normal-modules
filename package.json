@@ -12,7 +12,8 @@
     "*.js": ["prettier", "git add"]
   },
   "pre-commit":[
-    "precommit"
+    "precommit",
+    "prettier"
   ],
   "keywords": [],
   "author": "Evan",
