@@ -5,14 +5,11 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --single-quote --trailing-comma --print-width 100 --useTabs --write '**/*.{js,css,md}'",
-    "precommit": "lint-staged"
+    "prettier": "prettier --single-quote --trailing-comma --print-width 100 --useTabs --write && git add . && git status"
   },
-  "lint-staged": {
-    "*": [
-      "prettier --single-quote --trailing-comma --print-width 100 --useTabs --write",
-      "git add"
-   ]
-  },
+  "pre-commit": [
+    "prettier"
+  ],
   "keywords": [],
   "author": "Evan",
   "license": "ISC",
