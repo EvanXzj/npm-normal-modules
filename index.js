@@ -10,7 +10,7 @@ let a = [
   {
  b: 2,
 c: 3,
-  },
+ },
 ];
 var a = "x1zla";
 async x => {
