@@ -9,7 +9,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged":{
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": ["prettier --parser flow --write", "git add"]
   },
   "keywords": [],
   "author": "Evan",
