@@ -5,7 +5,7 @@ let a = function(a, b) {
 let a = [
   {
     a: 2,
-    hah: 1,
+   hah: 1,
   },
   {
  b: 2,
