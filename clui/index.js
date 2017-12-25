@@ -14,7 +14,7 @@ let outputBuffer = new LineBuffer({
   x: 0,
   y: 0,
   width: 'console',
-  height: 'console'
+  height: 'console',
 });
 
 new Line(outputBuffer)
@@ -22,9 +22,7 @@ new Line(outputBuffer)
   .fill()
   .store();
 
-new Line(outputBuffer)
-  .fill()
-  .store();
+new Line(outputBuffer).fill().store();
 
 new Line(outputBuffer)
   .column('Suscipit', 20, [clc.cyan])
@@ -33,7 +31,6 @@ new Line(outputBuffer)
   .column('Laudantium', 11, [clc.cyan])
   .fill()
   .store();
-
 
 for (let l = 0; l < 20; l++) {
   new Line(outputBuffer)
@@ -46,7 +43,6 @@ for (let l = 0; l < 20; l++) {
 }
 
 outputBuffer.output();
-
 
 // let clui = require('clui'),
 //     clc = require('cli-color'),

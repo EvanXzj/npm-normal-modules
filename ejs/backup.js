@@ -11,24 +11,22 @@
 // Static caching of templates
 // Complies with the Express view system
 
-
 // example
-// <% if (user) {%> 
+// <% if (user) {%>
 //   <h2><%= user.name %></h2>
 // <% } %>
 
 // usage
 // var template = ejs.compile(str, options);
 // template(data);
-// // => Rendered HTML string 
- 
-// ejs.render(str, data, options);
-// // => Rendered HTML string 
- 
-// ejs.renderFile(filename, data, options, function(err, str){
-//     // str => Rendered HTML string 
-// });
+// // => Rendered HTML string
 
+// ejs.render(str, data, options);
+// // => Rendered HTML string
+
+// ejs.renderFile(filename, data, options, function(err, str){
+//     // str => Rendered HTML string
+// });
 
 // tags
 // <% 'Scriptlet' tag, for control-flow, no output
@@ -45,15 +43,15 @@
 // custom delimiter
 // var ejs = require('ejs'),
 //     users = ['geddy', 'neil', 'alex'];
- 
-// // Just one template 
+
+// // Just one template
 // ejs.render('<?= users.join(" | "); ?>', {users: users}, {delimiter: '?'});
-// // => 'geddy | neil | alex' 
- 
-// // Or globally 
+// // => 'geddy | neil | alex'
+
+// // Or globally
 // ejs.delimiter = '$';
 // ejs.render('<$= users.join(" | "); $>', {users: users});
-// // => 'geddy | neil | alex' 
+// // => 'geddy | neil | alex'
 
 // layouts
 // <%- include('header') -%>

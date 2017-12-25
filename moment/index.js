@@ -4,7 +4,7 @@ let log = console.log;
 
 let now = moment();
 
-log(now.format())
+log(now.format());
 
 let day = moment('1991-12-06 07:12:32');
 
