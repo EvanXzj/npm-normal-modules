@@ -14,12 +14,7 @@
         "trailingComma": "es5"
       }
     ],
-    "no-var": ["error"],
-    "space-before-function-paren": "error",
-    "space-in-parens": "error",
-    "spaced-comment": "error",
-    "space-before-blocks": "error",
-    "arrow-body-style": "error"
+    "no-var": ["error"]
   },
   "parser": "babel-eslint"
 }
