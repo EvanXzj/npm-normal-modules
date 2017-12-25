@@ -12,10 +12,9 @@ let a = [
     c: 3,
   },
 ];
-var a =       'x1zla';
-async x   => {
-  try  {
-        console.log(1);
-    } catch (err) {}
-  
+var a = 'x1zla';
+async x => {
+  try {
+    console.log(1);
+  } catch (err) {}
 };

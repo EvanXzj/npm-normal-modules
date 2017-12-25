@@ -8,9 +8,12 @@
     "prettier": "prettier --single-quote --trailing-comma=es5 --print-width 100 --write '**/*.{js,css,md}' && git add . && git status",
     "precommit": "lint-staged"
   },
-  "lint-staged":{
-    "*.js": ["prettier --parser flow --write", "git add"]
+  "lint-staged": {
+    "*.js": ["prettier", "git add"]
   },
+  "pre-commit":[
+    "precommit"
+  ],
   "keywords": [],
   "author": "Evan",
   "license": "ISC",
