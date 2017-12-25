@@ -11,14 +11,14 @@
 const clui = require('clui'),
   Spinner = clui.Spinner;
 
-let countdown = new Spinner('Exiting in 10 seconds...  ', ['⣾','⣽','⣻','⢿','⡿','⣟','⣯','⣷']);
- 
-countdown.start()
+let countdown = new Spinner('Exiting in 10 seconds...  ', ['⣾', '⣽', '⣻', '⢿', '⡿', '⣟', '⣯', '⣷']);
 
-let number  = 10;
+countdown.start();
+
+let number = 10;
 
 setInterval(() => {
-  number --;
+  number--;
   countdown.message(`Exiting in ${number} seconds...`);
   if (number === 0) {
     process.stdout.write('\n');

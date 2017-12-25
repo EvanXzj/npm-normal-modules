@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
-    "prettier": "prettier */**/*.js --ignore-path ./.prettierignore --write && git add . && git status"
+    "format": "prettier --single-quote --trailing-comma --print-width 100 --write '**/*.{js,css,md}'",
+    "prettier": "prettier --single-quote --trailing-comma=es5 --print-width 100 --write '**/*.{js,css,md}' && git add . && git status",
+    "precommit": "lint-staged"
   },
+  "lint-staged": {
+    "*.js": ["prettier", "git add"]
+  },
+  "pre-commit":[
+    "precommit"
+  ],
   "keywords": [],
   "author": "Evan",
   "license": "ISC",
@@ -22,6 +29,7 @@
     "gradient-string": "^1.0.0",
     "hashids": "^1.1.4",
     "inquirer": "^4.0.1",
+    "marked": "^0.3.9",
     "minimist": "^1.2.0",
     "moment": "^2.20.1",
     "ms": "^2.1.1",

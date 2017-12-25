@@ -11,22 +11,22 @@ let myClear = ({ bool, delay = false } = {}) => {
   console.log(bool);
 
   if (delay) {
-    setTimeout(function () {
+    setTimeout(function() {
       clear(bool);
     }, delay * 1000);
   } else {
-    clear(bool)
+    clear(bool);
     // 如果bool为false 不清除屏幕上的东西，只是把cursor置于顶行。
   }
-}
+};
 
-console.log('hahah')
+console.log('hahah');
 
-console.log('hahah')
+console.log('hahah');
 
-console.log('hahah')
-console.log('hahah')
-console.log('hahah')
-console.log('hahah')
+console.log('hahah');
+console.log('hahah');
+console.log('hahah');
+console.log('hahah');
 
 myClear({ bool: true, delay: 10 });

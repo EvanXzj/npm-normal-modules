@@ -9,7 +9,7 @@ const clui = require('clui');
 
 const Progress = clui.Progress;
 
-let  progressBar = new Progress(20);
-console.log(progressBar.update(10,40));
+let progressBar = new Progress(20);
+console.log(progressBar.update(10, 40));
 
 console.log(progressBar.update(0.6));

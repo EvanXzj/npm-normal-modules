@@ -1,21 +1,21 @@
 const randomstring = require('randomstring');
 
 randomstring.generate();
-// >> "XwPp9xazJ0ku5CZnlmgAx2Dld8SHkAeT" 
- 
+// >> "XwPp9xazJ0ku5CZnlmgAx2Dld8SHkAeT"
+
 randomstring.generate(7);
-// >> "xqm5wXX" 
- 
+// >> "xqm5wXX"
+
 randomstring.generate({
   length: 12,
-  charset: 'alphabetic'
+  charset: 'alphabetic',
 });
-// >> "AqoTIzKurxJi" 
- 
+// >> "AqoTIzKurxJi"
+
 randomstring.generate({
-  charset: 'abc'
+  charset: 'abc',
 });
-// >> "accbaabbbbcccbccccaacacbbcbbcbbc" 
+// >> "accbaabbbbcccbccccaacacbbcbbcbbc"
 
 // let a = function (c, b) {
 //   return c + b;

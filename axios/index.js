@@ -11,21 +11,20 @@ let log = console.log;
 // });
 
 let getPage = async function(url) {
-    let result;
-    
-    try {
-      result = await axios.get(url, {});
-    } catch (err) {
-      log(err);
-    }
+  let result;
 
-    return result;
-}
+  try {
+    result = await axios.get(url, {});
+  } catch (err) {
+    log(err);
+  }
 
+  return result;
+};
 
 let get = async () => {
-    log(await getPage('http://www.linuxidc.com/Linux/2016-09/134940.htm'))
-}
+  log(await getPage('http://www.linuxidc.com/Linux/2016-09/134940.htm'));
+};
 
 get();
 

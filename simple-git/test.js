@@ -8,7 +8,6 @@ const remote = `https://${USER}:${PASS}@${REPO}`;
 
 let git = gitP(__dirname);
 
-
 // 配合 github 授权试试看， 查看ginit REPO
 git()
   .init()

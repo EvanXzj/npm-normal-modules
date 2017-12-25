@@ -6,7 +6,15 @@
   },
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 100,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ],
+    "no-var": ["error"]
   },
   "parser": "babel-eslint"
 }

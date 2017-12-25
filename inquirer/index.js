@@ -2,7 +2,7 @@
  * @Author: Evan 
  * @Date: 2017-12-22 16:05:41 
  * @Last Modified by: Evan
- * @Last Modified time: 2017-12-22 17:56:44
+ * @Last Modified time: 2017-12-25 12:45:57
  */
 'use strict';
 let inquirer = require('inquirer');
@@ -14,13 +14,13 @@ let questions = [
     type: 'confirm',
     name: 'toBeDelivered',
     message: 'Is this for delivery?',
-    default: false
+    default: false,
   },
   {
     type: 'input',
     name: 'phone',
-    message: 'What\'s your phone number?',
-    validate: function (value) {
+    message: "What's your phone number?",
+    validate: function(value) {
       let pass = value.match(
         /^([01]{1})?[-.\s]?\(?(\d{3})\)?[-.\s]?(\d{3})[-.\s]?(\d{4})\s?((?:#|ext\.?\s?|x\.?\s?){1}(?:\d+)?)?$/i
       );
@@ -29,7 +29,7 @@ let questions = [
       }
 
       return 'Please enter a valid phone number';
-    }
+    },
   },
   {
     type: 'list',
@@ -37,19 +37,19 @@ let questions = [
     message: 'What size do you need?',
     choices: ['Large', 'Medium', new inquirer.Separator('^^^^^^^^'), 'Small', 'Customize'],
     default: 1,
-    filter: function (val) {
+    filter: function(val) {
       return val.toLowerCase();
-    }
+    },
   },
   {
     type: 'input',
     name: 'quantity',
     message: 'How many do you need?',
-    validate: function (value) {
+    validate: function(value) {
       let valid = !isNaN(parseFloat(value));
       return valid || 'Please enter a number';
     },
-    filter: Number
+    filter: Number,
   },
   {
     type: 'expand',
@@ -59,49 +59,49 @@ let questions = [
       {
         key: 'p',
         name: 'Pepperoni and cheese',
-        value: 'PepperoniCheese'
+        value: 'PepperoniCheese',
       },
       {
         key: 'a',
         name: 'All dressed',
-        value: 'alldressed'
+        value: 'alldressed',
       },
       {
         key: 'w',
         name: 'Hawaiian',
-        value: 'hawaiian'
-      }
-    ]
+        value: 'hawaiian',
+      },
+    ],
   },
   {
     type: 'rawlist',
     name: 'beverage',
     message: 'You also get a free 2L beverage',
     choices: ['Pepsi', '7up', 'Coke'],
-    default: 2
+    default: 2,
   },
   {
     type: 'input',
     name: 'comments',
     message: 'Any comments on your purchase experience?',
-    default: 'Nope, all good!'
+    default: 'Nope, all good!',
   },
   {
     type: 'checkbox',
     name: 'type',
     message: 'Select toppings',
-    choices: [{value: 'A', checked: true}, {value: 'B', disabled: true}, {value: 'C'}],
-    default: ['A']
+    choices: [{ value: 'A', checked: true }, { value: 'B', disabled: true }, { value: 'C' }],
+    default: ['A'],
   },
   {
     type: 'list',
     name: 'prize',
     message: 'For leaving a comment, you get a freebie',
     choices: ['cake', 'fries'],
-    when: function (answers) {
+    when: function(answers) {
       return answers.comments !== 'Nope, all good!';
-    }
-  }
+    },
+  },
 ];
 
 // inquirer.prompt(questions).then(answers => {
@@ -118,6 +118,6 @@ let inquiry = async () => {
   }
 
   console.log(result);
-}
+};
 
 inquiry();
