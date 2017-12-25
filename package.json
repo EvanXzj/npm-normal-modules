@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --single-quote --trailing-comma --print-width 100 --write '**/*.{js,css,md}'",
-    "prettier": "prettier --single-quote --trailing-comma=es5 --print-width 100 --write '**/*.{js,css,md}' && git add . && git status"
+    "prettier": "prettier --single-quote --trailing-comma=es5 --print-width 100 --write '**/*.{js,css,md}' && git add . && git status",
+    "precommit": "lint-staged"
   },
-  "pre-commit": [
-    "prettier"
-  ],
+  "lint-staged":{
+    "*.js": ["eslint --fix", "git add"]
+  },
   "keywords": [],
   "author": "Evan",
   "license": "ISC",
