@@ -1,0 +1,42 @@
+{
+  "name": "npm-modules-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
+    "prettier": "prettier */**/*.js --ignore-path ./.prettierignore --write && git add . && git status"
+  },
+  "keywords": [],
+  "author": "Evan",
+  "license": "ISC",
+  "dependencies": {
+    "array-uniq": "^1.0.3",
+    "axios": "^0.17.1",
+    "cheerio": "^1.0.0-rc.2",
+    "clear": "^0.0.1",
+    "cli-color": "^1.2.0",
+    "clui": "^0.3.6",
+    "dateformat": "^3.0.2",
+    "figlet": "^1.2.0",
+    "gradient-string": "^1.0.0",
+    "hashids": "^1.1.4",
+    "inquirer": "^4.0.1",
+    "minimist": "^1.2.0",
+    "moment": "^2.20.1",
+    "ms": "^2.1.1",
+    "randomstring": "^1.1.5",
+    "shortid": "^2.2.8",
+    "simple-git": "^1.85.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.13.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.9.2"
+  }
+}
