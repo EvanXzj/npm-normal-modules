@@ -14,4 +14,8 @@ while (i--) {
   console.log(shortId.generate());
 }
 
-log(shortId.generate());
+    log(shortId.generate());
+
+
+
+    
