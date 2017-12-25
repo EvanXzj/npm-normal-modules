@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format":
-      "prettier --single-quote --trailing-comma --print-width 100 --useTabs --write '**/*.{js,css,md}'",
+    "format": "prettier --single-quote --trailing-comma --print-width 100 --useTabs --write '**/*.{js,css,md}'",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
+    "*": [
       "prettier --single-quote --trailing-comma --print-width 100 --useTabs --write",
       "git add"
-    ]
+   ]
   },
   "keywords": [],
   "author": "Evan",
