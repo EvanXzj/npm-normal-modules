@@ -12,7 +12,7 @@ let a = [
     c: 3,
   },
 ];
-var a = 'x1zla';
+let a = 'x1zla';
 
 async x => {
   try {
